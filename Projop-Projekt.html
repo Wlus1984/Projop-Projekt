@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Protoryp</title>
+  <style>
+    canvas {
+      background-color: #222;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+
+<script>
+  const TILE_SIZE = 40;
+  const PATH_COLOR = 'gray';
+  const TOWER_COLOR = 'blue';
+
+  class Tower {
+    constructor(x, y) {
+      this.x = x;
+      this.y = y;
+      this.range = 100;
+      this.radius = 15;
+    }
+
+    draw(ctx) {
+      ctx.fillStyle = TOWER_COLOR;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  class Path {
+    constructor(points) {
+      this.points = points;
+      this.width = TILE_SIZE / 2;
+    }
+
+    draw(ctx) {
+      ctx.strokeStyle = PATH_COLOR;
+      ctx.lineWidth = this.width;
+      ctx.beginPath();
+      ctx.moveTo(this.points[0].x, this.points[0].y);
+      for (let i = 1; i < this.points.length; i++) {
+        ctx.lineTo(this.points[i].x, this.points[i].y);
+      }
+      ctx.stroke();
+    }
+  }
+
+  class Game {
+    constructor(canvas) {
+      this.ctx = canvas.getContext('2d');
+      this.towers = [];
+      this.path = new Path([
+        {x: 0, y: 280}, {x: 200, y: 280}, {x: 200, y: 100},
+        {x: 600, y: 100}, {x: 600, y: 500}, {x: 800, y: 500}
+      ]);
+
+      canvas.addEventListener('click', (e) => this.placeTower(e));
+      this.render();
+    }
+
+    placeTower(e) {
+      const rect = e.target.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      this.towers.push(new Tower(x, y));
+      this.render();
+    }
+
+    render() {
+      const ctx = this.ctx;
+      ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+      this.path.draw(ctx);
+      this.towers.forEach(t => t.draw(ctx));
+    }
+  }
+
+  const canvas = document.getElementById('gameCanvas');
+  new Game(canvas);
+</script>
+</body>
+</html>
