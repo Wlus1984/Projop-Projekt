@@ -4,7 +4,7 @@
 Gra, będzie polegać na obronie twoje plemienie przed złymi kostkami śmierci.
 
 # Interakcja z użytkownikiem
-Użytkownik musi postawiać wieże obrończe aby ochronić swe plemie brzed przeciwnikami.
+Użytkownik musi postawiać wieże obrończe aby ochronić swe plemie brzed przeciwnikami. Wieże postawia się lewym przyciskiem myszy.
 
 # Zasady Aplikacji
 Aplikacja działa na zasadach gry TOWER DEFENSE.
