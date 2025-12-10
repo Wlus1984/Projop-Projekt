@@ -1,7 +1,7 @@
 # Projop-Projekt
 
 # Cel Aplikacji
-Gra, będzie polegać na obronie twoje plemienie przed złymi kostkami śmierci.
+Gra, będzie polegać na obronie twojego plemienia przed złymi kostkami śmierci.
 
 # Interakcja z użytkownikiem
 Użytkownik musi postawiać wieże obrończe aby ochronić swe plemie brzed przeciwnikami. Wieże postawia się lewym przyciskiem myszy.
