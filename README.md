@@ -1,5 +1,3 @@
-# Projop-Projekt
-
 # Cel Aplikacji
 Jest to prosta gra Tower Defense, gdzie próbuje się dojść do finalnej fali, bez przegrania.
 
