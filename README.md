@@ -1,25 +1,10 @@
 # Projop-Projekt
 
 # Cel Aplikacji
-Gra, będzie polegać na obronie twojego plemienia przed złymi kostkami śmierci.
+Jest to prosta gra Tower Defense, gdzie próbuje się dojść do finalnej fali, bez przegrania.
 
 # Interakcja z użytkownikiem
-Użytkownik musi postawiać wieże obrończe aby ochronić swe plemie brzed przeciwnikami. Wieże postawia się lewym przyciskiem myszy.
+Użytkownik musi postawiać wieże aby powstrzymać przeciwników przed dojściem do końca ścieżki. Wieże postawia się lewym przyciskiem myszy.
 
 # Zasady Aplikacji
 Aplikacja działa na zasadach gry TOWER DEFENSE.
-
-# ver. 0.03
-Nareszcie napisałem jakiś kod, i dodałem zasadę Meaningful Names.
-
-# ver. 0.06
-Zimplementowano zasadę Single Responsibility Principle
-
-# ver 0.09
-Zimplementowano zasadę Avoid Magic Numbers
-
-# ver 0.12
-Zimplementowano zasadę Encapsulation
-
-# ver 0.15
-Zimplementowano zasadę KISS
